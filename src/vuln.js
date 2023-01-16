@@ -1,4 +1,4 @@
-const express = require('express')
+const express1 = require('express')
 const router = express.Router()
 
 router.get('/greeting', (req, res) => {
