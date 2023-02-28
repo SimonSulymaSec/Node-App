@@ -11,5 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: docker build . -t simonsulymasec/nest-app
-      - run: echo "pJA7Wt6W^i$$5-n" | docker login -u ${{secrets.DOCKERHUB_USER}} --password-stdin
+      - run: echo "${{secrets.DOCKERHUB_TOKEN}}" | docker login -u ${{secrets.DOCKERHUB_USER}} --password-stdin
       - run: docker push simonsulymasec/nest-app
